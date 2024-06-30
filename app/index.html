@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title> Css Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>CSS Document</header>
+        <ul>
+            <li><a href="#Css_Layout" class="nav-link">CSS layout</a></li>
+            <li><a href="#Introduction_to_CSS_layout" class="nav-link">Introduction to CSS layout</a></li>
+            <li><a href="#Normal_Flow" class="nav-link">Normal Flow</a></li>
+            <li><a href="#Flexbox" class="nav-link">Flexbox</a></li>
+            <li><a href="#Grid" class="nav-link">Grid</a></li>
+            <li><a href="#Float" class="nav-link">Float</a></li>
+            <li><a href="#Positioning" class="nav-link">Positioning</a></li>
+            <li><a href="#Multiple_column_layout" class="nav-link">Multiple column layout</a></li>
+            <li><a href="#Responsive_Desing" class="nav-link">Responsive Desing</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Css_Layout" >
+            <header>Css Layout</header>
+            <p>At this point, we've looked at CSS fundamentals, how to style text, and how to style and manipulate the
+                boxes that your content sits inside. Now it's time to look at how to correctly arrange your boxes in
+                relation to the viewport as well as to one another. We've covered the necessary prerequisites, so let's
+                dive deep into CSS layout, looking at such various features as: different display settings, positioning,
+                modern layout tools like flexbox and CSS grid, and some of the legacy techniques you might still want to
+                know about.</p>
+            <h3>Prerequisites</h3>
+            <p>Before starting this module, you should already:</p>
+            <ol>
+                <li>Have basic familiarity with HTML, as discussed in the Introduction to HTML module.</li>
+                <li>Be comfortable with CSS fundamentals, as discussed in Introduction to CSS.</li>
+                <li>Understand how to style boxes.</li>
+            </ol>
+        </section>
+        <section class="main-section" id="Introduction_to_CSS_layout">
+            <header>Introduction to CSS layout</header>
+            <p>This article will recap some of the CSS layout features we've already touched upon in previous modules,
+                such as different display values, as well as introduce some of the concepts we'll be covering throughout
+                this module.</p>
+            <p>CSS page layout techniques allow us to take elements contained in a web page and control where they're
+                positioned relative to the following factors: their default position in normal layout flow, the other
+                elements around them, their parent container, and the main viewport/window. The page layout techniques
+                we'll be covering in more detail in this module are:</p>
+            <ul>
+                <li>Normal flow</li>
+                <li>The display property</li>
+                <li>Flexbox</li>
+                <li>Grid</li>
+                <li>Floats</li>
+                <li>Positioning</li>
+                <li>Table layout</li>
+                <li>Multiple-column layout</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Normal_Flow">
+            <header>Normal Flow</header>
+            <p>Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout.
+                Let's look at a quick HTML example:</p>
+            <code>
+                p {
+                    <br>
+                    <br>
+                    background: rgb(255 84 104 / 30%);
+                    <br>
+                    border: 2px solid rgb(255 84 104);
+                    <br>
+                    padding: 10px;
+                    <br>
+                    margin: 10px;
+                    <br>
+                    <br>
+                  } 
+                  <br>
+                  body {
+                    <br>
+                    <br>
+                    width: 500px;
+                    <br>
+                    margin: 0 auto;
+                    <br>
+                    <br>
+                  }   
+            </code>
+
+
+
+
+        </section>
+        <section class="main-section" id="Flexbox">
+
+            <header>Flexbox</header>
+
+            <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to
+                fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+            </p>
+            <h3>Why Flexbox?</h3>
+            <p>For a long time, the only reliable cross-browser compatible tools available for creating CSS layouts were
+                features like floats and positioning. These work, but in some ways they're also limiting and
+                frustrating.</p>
+            <p>The following simple layout designs are either difficult or impossible to achieve with such tools in any
+                kind of convenient, flexible way:</p>
+            <ul>
+                <li>Vertically centering a block of content inside its parent.</li>
+                <li>Making all the children of a container take up an equal amount of the available width/height,
+                    regardless of how much width/height is available.</li>
+                <li>Making all columns in a multiple-column layout adopt the same height even if they contain a
+                    different amount of content.</li>
+            </ul>
+            <code>
+                section {
+                    <br>
+                    <br>
+                    display: flex;
+                    <br>
+                flex-direction: column;
+                  <br>
+                flex-wrap: wrap;
+                <br>
+                <br>
+            }
+            </code>
+
+        </section>
+        <section class="main-section" id="Grid">
+            <header>Grid</header>
+            <p>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up
+                our design elements. They help us to create layouts in which our elements won't jump around or change
+                width as we move from page to page, providing greater consistency on our websites.</p>
+            <p>A grid will typically have columns, rows, and then gaps between each row and column. The gaps are
+                commonly referred to as gutters.</p>
+            <code>
+                .container {
+                    <br>
+                    <br>
+                    display: grid;
+                    <br>
+                    grid-template-columns: repeat(3, 1fr);
+                    <br>
+                    grid-auto-rows: 100px;
+                    <br>
+                    gap: 20px;
+                    <br>
+                    <br>
+                  }
+            </code>
+            <p>The rules for grid-template-areas are as follows:</p>
+            <ul>
+                <li>You need to have every cell of the grid filled.
+                </li>
+                <li>To span across two cells, repeat the name.</li>
+                <li>To leave a cell empty, use a <mark>.</mark> (period).</li>
+                <li>Areas must be rectangular — for example, you can't have an L-shaped area.</li>
+                <li>Areas can't be repeated in different locations.</li>
+            </ul>
+            <p>You can play around with our layout, changing the footer to only sit underneath the article and the
+                sidebar to span all the way down. This is a very nice way to describe a layout because it's clear just
+                from looking at the CSS to know exactly what's happening.</p>
+
+        </section>
+        <section class="main-section" id="Float" >
+            <header>Float</header>
+            <p>
+                The float property was introduced to allow web developers to implement layouts involving an image
+                floating inside a column of text, with the text wrapping around the left or right of it. The kind of
+                thing you might get in a newspaper layout.
+            </p>
+            <p>But web developers quickly realized that you can float anything, not just images, so the use of float
+                broadened, for example, to fun layout effects such as drop-caps.</p>
+            <p>Floats have commonly been used to create entire website layouts featuring multiple columns of information
+                floated so they sit alongside one another (the default behavior would be for the columns to sit below
+                one another in the same order as they appear in the source). There are newer, better layout techniques
+                available. Using floats in this way should be regarded as a legacy technique.</p>
+            <code>
+                .box {
+                    <br>
+                    <br>
+                    float: left;
+                    <br>
+                    margin-right: 15px;
+                    <br>
+                    width: 150px;
+                    <br>
+                    height: 100px;
+                    <br>
+                    border-radius: 5px;
+                    <br>
+                    background-color: rgb(207 232 220);
+                    <br>
+                    padding: 1em;
+                    <br>
+                    <br>
+                  }  
+            </code>
+            <p>You now know all there is to know about floats in modern web development. See the article on legacy
+                layout methods for information on how they used to be used, which may be useful if you find yourself
+                working on older projects.</p>
+
+        </section>
+        <section class="main-section" id="Positioning">
+            <header>Positioning</header>
+            <p>Positioning allows you to take elements out of normal document flow and make them behave differently, for
+                example, by sitting on top of one another or by always remaining in the same place inside the browser
+                viewport. This article explains the different position values and how to use them.</p>
+
+            <p>Positioning allows us to produce interesting results by overriding normal document flow. What if you want
+                to slightly alter the position of some boxes from their default flow position to give a slightly quirky,
+                distressed feel? Positioning is your tool. Or what if you want to create a UI element that floats over
+                the top of other parts of the page and/or always sits in the same place inside the browser window no
+                matter how much the page is scrolled? Positioning makes such layout work possible.</p>
+            <p>
+                There are a number of different types of positioning that you can put into effect on HTML elements. To
+                make a specific type of positioning active on an element, we use the position property.
+            </p>
+            <ul>
+                <li>static</li>
+                <li>absolute</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>sticky</li>
+            </ul>
+            <code>
+                p:nth-of-type(1) {
+                    <br>
+                    <br>
+                    position: absolute;
+                    <br>
+                    background: lime;
+                    <br>
+                    top: 10px;
+                    <br>
+                    right: 30px;
+                    <br>
+                    <br>
+                  }
+            </code>
+
+        </section>
+        <section class="main-section" id="Multiple_column_layout">
+            <header>Multiple column layout</header>
+            <p>
+                The multiple-column layout specification provides you with a method for laying content out in columns,
+                as you might see in a newspaper. This article explains how to use this feature.
+            </p>
+            <p>Let's explore how to use multiple-column layout — often referred to as multicol. You can follow along by
+                downloading the multicol starting point file and adding the CSS into the appropriate places. At the
+                bottom of the section you can see an example of what the final code should look like.</p>
+
+            <code>
+                .container {
+                    <br>
+                    <br>
+                    column-width: 250px;
+                    <br>
+                    column-gap: 20px;
+                    <br>
+                    <br>
+                  }
+                  <br>
+              .card {
+                <br>
+                <br>
+                background-color: rgb(207 232 220);
+                <br>
+                border: 2px solid rgb(79 185 227);
+                <br>
+                padding: 10px;
+                <br>
+                margin: 0 0 1em 0;
+                <br>
+                <br>
+                }
+            </code>
+
+        </section>
+        <section class="main-section" id="Responsive_Desing" >
+            <header>Responsive Desing</header>
+            <p>Responsive web design (RWD) is a web design approach to make web pages render well on all screen sizes
+                and resolutions while ensuring good usability. It is the way to design for a multi-device web. In this
+                article, we'll help you understand some techniques that can be used to master it.</p>
+            <h3>Introducing responsive web design</h3>
+            <p>HTML is fundamentally responsive, or fluid. If you create a web page containing only HTML, with no CSS,
+                and resize the window, the browser will automatically reflow the text to fit the viewport.</p>
+            <p>While the default responsive behavior may sound like no solution is needed, long lines of text displayed
+                full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS,
+                such as by creating columns or adding significant padding, the site may look squashed for the user who
+                narrows their browser window or opens the site on a mobile device.</p>
+            <code>
+                @media screen and (min-width: 80rem) {
+                    <br>
+                    
+                    .container {
+                        <br>
+                        <br>
+                      margin: 1em 2em;
+                      <br>
+                      <br>
+                    }
+                  }
+            </code>
+
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <ul>
+                <li>
+                    All the documentation in this page is taken from <a href="https://developer.mozilla.org"
+                        target="_blank">MDN</a>
+                </li>
+            </ul>
+
+
+
+        </section>
+    </main>
+</body>
+
+</html>
