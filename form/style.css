@@ -1,0 +1,144 @@
+body{
+    background-color: #BFCDE0;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #fdfdfd;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+h1 ,p{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    
+}
+p{
+    margin-bottom: 1.5rem;
+    margin-top: -0.5em;
+    
+}
+
+form{
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #0C7489;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+}
+legend{
+    border: none;
+    font-family: tahoma;
+    font-weight: 700;
+}
+fieldset{
+    margin-bottom: 1em;
+    border: none;
+    
+}
+.field1 input{
+    display: block;
+    width: 100%;
+    height: 2.2em;
+    border-radius: 5px;
+    margin: 0.5em 0 1.5em 0;
+    font-weight: 400;
+    padding-left: 8px;
+    font-size: 15px;
+    font-family: tahoma;
+    background-color: #fdfff5;
+}
+.field1 , .field2{
+    font-size: 1em ; 
+    font-weight: 700;
+}
+.field2 select{
+    display: block; 
+    width: 100%;
+    height: 2.2rem;
+    padding-left: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: tahoma;
+    color: #746f6f;
+    margin: 0.5em 0 1.5em 0;
+    border-radius: 5px;
+    background-color:#fdfff5
+}
+.field3 label{
+    display: block;
+    margin:5px 0;
+    font-size: 15px;
+    font-weight:600;
+}
+.field3 input{
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.field4 select{
+    display: block; 
+    width: 100%;
+    height: 2.2rem;
+    padding-left: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: tahoma;
+    color: #746f6f;
+    margin: 0.5em 0 1.5em 0;
+    border-radius: 5px;
+    background-color:#fdfff5
+
+}
+.field5 legend{
+    margin-bottom: 0.5em;
+}
+.field5 input{
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.field5{
+    font-weight: 500;
+
+}
+.field6 textarea{
+    width: 100%;
+    min-height: 100px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: tahoma;
+    color: #746f6f;
+    margin: 0.5em 0 1.5em 0;
+    border-radius: 5px;
+    background-color:#fdfff5;
+    padding-left: 8px;
+    display: block;
+}
+
+.submit input[type="submit"]{
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    background-color:#14213D;
+    border-radius: 5px;
+    font-size:20px;
+    font-family: tahoma;
+    font-weight: 600;
+    margin-top: -1em;
+    color: #fdfff5;
+}
