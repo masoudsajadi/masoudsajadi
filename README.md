@@ -1,6 +1,6 @@
 - 👋 Hi, I’m masoud sajadpour im 22 and i study software engineering im living in iran 
 - 👀  currently,im interested to web design and web developing.so i started to learning about that. im going to be a web developer.
-- 📫  my instagram account is :(lmasoudl.sj) and telegram id is :(@lmasoudl.sj)    im working on my linkedin sorry!
+- 📫  my instagram account is :(lmasoudl.sj) and telegram id is :(@lmasoudl.sj).
 - ⚡ Fun fact: i love playing video games (dota2 is my favorite game) :) 
 
 <!---
